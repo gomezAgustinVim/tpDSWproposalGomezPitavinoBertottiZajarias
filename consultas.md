@@ -1,15 +1,7 @@
 # Back
 
-1. Cómo integrar snowflake id (es necesario reemplazar el base entity con su id?)
-1. Debería meter el createdAt?
 1. Chequear que los origenes de cors anden bien
-1. Pedido no es CRUD, pero hace falta codificarlo con la capa MVC incluyendo el controller, repository, routes, etc?
-
-## Endpoints específicos de favoritos
-
-- POST /api/clientes/:id/favoritos/:muebleId → agregar favorito
-- DELETE /api/clientes/:id/favoritos/:muebleId → quitar favorito
-- GET /api/clientes/:id/favoritos → listar favoritos
+1. Cómo integrar snowflake id (es necesario reemplazar el base entity con su id?)
 
 ## Tareas pendientes para el backend
 
@@ -33,8 +25,6 @@ Un pedido es epic o caso de uso por tener valor para el negocio
 
 ### Baja prioridad
 
-1. Implementar CRUD favoritos:
-   - Hacer desde clientes un array de favoritos (sin fechaAgregado)
 2. Reconsiderar relaciones con linea pedido:
    - oneToMany desde mueble (con pedidos), manyToOne desde pedido (con muebles)
 3. HistorialCompras será eliminado, por lo menos por ahora. Posiblemente luego será implementado, es decir que no se eliminará en concepto:
