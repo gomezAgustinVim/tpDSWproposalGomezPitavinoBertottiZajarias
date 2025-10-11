@@ -23,13 +23,12 @@
 - Rate limiting (por IP, endpoint o token) → express-rate-limit.
 - Helmet para cabeceras seguras.
 - CORS controlado, no globalizado. ✅
-- Swagger/OpenAPI para documentar automáticamente tus endpoints.
 - Logger: usa pino o winston para logs con timestamps y niveles (info, warn, error).
 
 | Aspecto      | Mejora clave                                  |
 | ------------ | --------------------------------------------- |
-| Sanitización | Reemplazar por DTO o validación con `zod`     |
-| Errores      | Middleware global + `asyncHandler`            |
+| Sanitización | Reemplazar por DTO o validación con `zod` ✅  |
+| Errores      | Middleware global + `asyncHandler` ✅         |
 | Populate     | Controlar niveles para no sobrecargar queries |
 | Respuestas   | Estandarizar formato JSON                     |
 | Extra        | Logger + Helmet + Swagger para docs           |
@@ -42,14 +41,5 @@ Un pedido es epic o caso de uso por tener valor para el negocio
    - oneToMany desde mueble (con pedidos), manyToOne desde pedido (con muebles)
 3. HistorialCompras será eliminado, por lo menos por ahora. Posiblemente luego será implementado, es decir que no se eliminará en concepto:
    - Es un caso de uso para ver el histórico de pedidos (filtrar por pedido)
-
-## Extras de excelencia
-
-- Pagos o transacciones: usar transacciones ACID del ORM (em.transactional).
-- Cache con Redis para endpoints intensivos.
-- Pagos y colas → RabbitMQ, Kafka o BullMQ.
-- Internacionalización (i18n) si tenés front multi-lenguaje.
-- Soft deletes (@Property({ onDelete: "soft" }) o flag activo = false).
-- Auditoría / timestamps automáticos con @Property({ onCreate, onUpdate }).
 
 # Front
