@@ -6,7 +6,7 @@
 - Error handler global innecesario para AD
 - Conseguirme los clientes del favorito no es necesario (no lo pongo en el populate)
 
-- Dos casos de uso terminados:
+- Necesitamos dos casos de uso terminados:
   - Hacer gestión de pago
   - Gestión de estado de pedido
 
