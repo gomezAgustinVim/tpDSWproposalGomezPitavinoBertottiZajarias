@@ -1,7 +1,6 @@
 # Back
 
-5. Modelar pago como CUU?
-6. Crear seeder con mikroORM (o desactivar el drop schema)
+1. Crear seeder con mikroORM (o desactivar el drop schema)
 
 - Error handler global innecesario para AD
 - Conseguirme los clientes del favorito no es necesario (no lo pongo en el populate)
