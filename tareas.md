@@ -7,6 +7,16 @@
 
 ## Para AD
 
+Plan de ejecución recomendado para backend:
+
+1. Agregar Usuario + Auth + Roles
+1. Proteger rutas
+1. Agregar tests (unitario + integración)
+1. Completar CRUDs faltantes
+1. Swagger
+1. README + scripts
+1. Deploy
+
 - Autenticación JWT con refresh tokens (expiran, se renuevan).
 - Autorización basada en roles o scopes (admin, cliente, invitado…).
 - Hash de contraseñas con bcrypt o argon2.
