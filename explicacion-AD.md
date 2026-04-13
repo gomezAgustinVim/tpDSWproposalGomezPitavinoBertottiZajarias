@@ -111,44 +111,6 @@ describe("POST /api/pedidos", () => {
 - Al menos **2 niveles de acceso**
 - Protección de rutas
 
-### ✅ Solución clara y defendible
-
-**JWT + roles**
-
-Roles:
-
-- `cliente`
-- `admin`
-
----
-
-## 🧑‍💻 Entidad Usuario
-
-```ts
-// src/usuario/usuario.entity.ts
-@Enum(() => ["cliente", "admin"])
-rol!: "cliente" | "admin";
-
-@Property()
-email!: string;
-
-@Property()
-passwordHash!: string;
-```
-
----
-
-## 🔐 Login
-
-```ts
-// POST /api/auth/login
-const token = jwt.sign(
-  { userId: user.id, rol: user.rol },
-  process.env.JWT_SECRET!,
-  { expiresIn: "1h" },
-);
-```
-
 ---
 
 ## 🛡 Middleware de autenticación
@@ -316,7 +278,3 @@ Orden **óptimo** (no improvises):
 
 ---
 
-Si querés, en el próximo mensaje hacemos **paso 1 completo**:
-👉 diseño final de `Usuario`, `auth`, `login` y middlewares **con código listo para pegar**.
-
-Decime y arrancamos.
