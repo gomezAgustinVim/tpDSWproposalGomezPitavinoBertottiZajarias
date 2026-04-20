@@ -19,12 +19,20 @@ Plan de ejecución recomendado para backend:
 1. README + scripts
 1. Deploy
 
-- Autenticación JWT con refresh tokens (expiran, se renuevan). ✅
+- Verificar en GET /:clienteId y GET /:clienteId/pedido/:id que el clienteId del parámetro coincida con el id del token (o sea admin)
+- Autenticación JWT sin refresh tokens (expiran, se renuevan). ✅
+- Autenticación JWT con refresh tokens (expiran, se renuevan).
 - Hash de contraseñas con bcrypt o argon2. ✅
 - Autorización basada en roles o scopes (admin, cliente, invitado…).
-- Rate limiting (por IP, endpoint o token) → express-rate-limit.
+- Rate limiting (por IP, endpoint o token) → express-rate-limit. ✅
+  - Si hace falta, se puede agregar rate limiters más especificos más adelante
 - Helmet para cabeceras seguras.
 - Logger: usa pino o winston para logs con timestamps y niveles (info, warn, error).
+- Proteger rutas de cliente.router.ts
+- Tests (1 unitario por integrante + 1 de integración)
+- Swagger
+- README + scripts
+- Deploy
 
 ## Proteger rutas
 
@@ -49,3 +57,33 @@ Un pedido es epic o caso de uso por tener valor para el negocio
 
 - Error handler global innecesario para AD
 - Conseguirme los clientes del favorito no es necesario (no lo pongo en el populate)
+
+Diferencia entre error 403 y 401
+
+Poniendo esto de ejemplo, podemos ver se ha autenticado correctamente al responsable de
+querer borrar al Usuario 123.
+
+```http
+DELETE /users/123 HTTP/1.1
+Host: example.com
+Authorization: Bearer abcd123
+```
+
+Sin embargo, por falta del rol adecuado ("admin"), este no podrá eliminarlo.
+
+```http
+HTTP/1.1 403 Forbidden
+Date: Tue, 02 Jul 2024 12:56:49 GMT
+Content-Type: application/json
+Content-Length: 88
+
+{
+  "error": "InsufficientPermissions",
+  "message": "Deleting users requires the 'admin' role."
+}
+```
+
+Esto es lo que hace la diferencia entre el 401 (unauthorized) y el 403 (forbidden). El
+primero es por mala autenticación (malas credenciales). El segundo es por falta de
+autorización (falta de permisos) a pesar de las credenciales, da lo mismo si te autenticas
+una y otra vez.
