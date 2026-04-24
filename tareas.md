@@ -22,7 +22,7 @@ Plan de ejecución recomendado para backend:
 Pendientes:
 
 1. Autenticación JWT sin refresh tokens (expiran, se renuevan). ✅
-1. Autenticación JWT con refresh tokens (expiran, se renuevan).
+1. Autenticación JWT con refresh tokens (expiran, se renuevan). ✅
 1. Hash de contraseñas con bcrypt o argon2. ✅
 1. Autorización basada en roles o scopes (admin, cliente, invitado…). ✅
 1. Rate limiting (por IP, endpoint o token) → express-rate-limit. ✅
