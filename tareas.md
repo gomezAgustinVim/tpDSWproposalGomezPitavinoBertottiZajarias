@@ -29,8 +29,8 @@ Pendientes:
    - Si hace falta, se puede agregar rate limiters más especificos más adelante
 1. Verificar en GET /:clienteId y GET /:clienteId/pedido/:id que el clienteId del parámetro coincida con el id del token (o sea admin)
 1. Un detalle: GET /:id, PUT /:id y PATCH /:id por ahora solo verifican que el usuario esté autenticado, pero no que sea el propio cliente o un admin. Eso está en la lista de pendientes.
-1. Helmet para cabeceras seguras.
-1. Logger: usa pino o winston para logs con timestamps y niveles (info, warn, error).
+1. Helmet para cabeceras seguras. ✅
+1. Logger: usa pino o winston para logs con timestamps y niveles (info, warn, error). ✅
 1. Tests (1 unitario por integrante + 1 de integración)
 1. Swagger
 1. README + scripts

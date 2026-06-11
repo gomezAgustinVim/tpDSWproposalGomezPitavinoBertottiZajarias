@@ -251,6 +251,10 @@ Un `openapi.yaml` con:
 npm run test
 ```
 
+```bash
+pnpm test
+```
+
 ---
 
 ### 📘 README (checklist)
@@ -277,4 +281,3 @@ Orden **óptimo** (no improvises):
 7. Deploy
 
 ---
-
