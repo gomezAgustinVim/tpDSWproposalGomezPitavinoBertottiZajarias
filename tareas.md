@@ -7,6 +7,9 @@
 
 ## Para AD
 
+- Revisar validación de stock (si es en backend o no):
+  - Aplicada en el controlador crearPedido
+
 Ahora mismo estamos parados en una etapa en la cual tenemos implementado el JWT token (autenticación) junto con bcrypt (hashing de las contraseñas). Podemos loguearnos perfectamente cada vez que lo probamos ya sea via curl, postman, o el propio front. Esto nos devuelve un token que expira en 8 horas. Faltaría renovar ese token via rate limiting o alguna cosa así y además permitir autorización y control de rutas.
 
 Plan de ejecución recomendado para backend:
