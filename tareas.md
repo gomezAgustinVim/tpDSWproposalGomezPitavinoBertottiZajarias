@@ -14,12 +14,12 @@ Ahora mismo estamos parados en una etapa en la cual tenemos implementado el JWT 
 
 Plan de ejecución recomendado para backend:
 
-1. Agregar Usuario + Auth + Roles (Auth autenticación roles autorización)
-1. Proteger rutas (autorización)
-1. Agregar tests (unitario + integración)
-1. Completar CRUDs faltantes
-1. Swagger
-1. README + scripts
+1. Agregar Usuario + Auth + Roles (Auth autenticación roles autorización) ✅
+1. Proteger rutas (autorización) ✅
+1. Agregar tests (unitario + integración) ✅
+1. Completar CRUDs faltantes ✅
+1. Swagger ✅
+1. README + scripts ✅
 1. Deploy
 
 Pendientes:
@@ -35,8 +35,8 @@ Pendientes:
 1. Helmet para cabeceras seguras. ✅
 1. Logger: usa pino o winston para logs con timestamps y niveles (info, warn, error). ✅
 1. Integrar pagos con alguna API ✅
-1. Tests (1 unitario por integrante + 1 de integración)
-1. Swagger
+1. Tests (1 unitario por integrante + 1 de integración) ✅
+1. Swagger ✅
 1. README + scripts
 1. Deploy
 
