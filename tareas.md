@@ -20,7 +20,7 @@ Plan de ejecución recomendado para backend:
 1. Completar CRUDs faltantes ✅
 1. Swagger ✅
 1. README + scripts ✅
-1. Deploy
+1. Deploy ✅
 
 Pendientes:
 
@@ -37,8 +37,8 @@ Pendientes:
 1. Integrar pagos con alguna API ✅
 1. Tests (1 unitario por integrante + 1 de integración) ✅
 1. Swagger ✅
-1. README + scripts
-1. Deploy
+1. README + scripts ✅
+1. Deploy ✅
 
 ## Proteger rutas
 
